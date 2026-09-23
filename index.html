@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-Connect Solutions — Powering the Platforms That Power India | CMMI Level 5</title>
-  <meta name="description" content="E-Connect Solutions is a CMMI Level 5 enterprise software firm. With 35+ years of delivery, we engineer configurable platforms for citizen services, public works, enterprise ERP, and supply chain governance across India.">
-  <meta name="keywords" content="GovTech India, Digital Transformation Government, CMMI Level 5 IT Company, E-Governance Solutions Rajasthan, Integrated Government ERP, Grievance Redressal Software, Civil Works Management System, Sovereign Digital Infrastructure">
+  <meta name="description"
+    content="E-Connect Solutions is a CMMI Level 5 enterprise software firm. With 35+ years of delivery, we engineer configurable platforms for citizen services, public works, enterprise ERP, and supply chain governance across India.">
+  <meta name="keywords"
+    content="GovTech India, Digital Transformation Government, CMMI Level 5 IT Company, E-Governance Solutions Rajasthan, Integrated Government ERP, Grievance Redressal Software, Civil Works Management System, Sovereign Digital Infrastructure">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    rel="stylesheet">
+
   <style>
     /* ==========================================================================
        DESIGN SYSTEM & RESET
@@ -41,16 +46,26 @@
       --radius-md: 12px;
       --radius-lg: 16px;
       --radius-xl: 24px;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
       --shadow-md: 0 4px 14px -2px rgba(15, 23, 42, 0.08);
       --shadow-lg: 0 12px 32px -4px rgba(15, 23, 42, 0.12);
       --shadow-xl: 0 20px 40px -8px rgba(11, 25, 44, 0.2);
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
+      max-width: 100%;
+      width: 100%;
+      position: relative;
     }
 
     html {
@@ -64,7 +79,6 @@
       background-color: #FFFFFF;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
     }
 
     img {
@@ -101,6 +115,7 @@
       background: var(--accent-light);
       color: var(--accent-blue);
       border: 1px solid rgba(2, 132, 199, 0.2);
+      max-width: 100%;
     }
 
     .badge-tag--dark {
@@ -144,6 +159,8 @@
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       border: none;
       white-space: nowrap;
+      max-width: 100%;
+      text-align: center;
     }
 
     .btn-primary {
@@ -182,6 +199,8 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       position: relative;
       z-index: 101;
+      width: 100%;
+      overflow: hidden;
     }
 
     .compliance-bar__inner {
@@ -197,6 +216,7 @@
       align-items: center;
       gap: 10px;
       font-weight: 600;
+      flex-wrap: wrap;
     }
 
     .compliance-bar__badge {
@@ -227,7 +247,8 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      width: 100%;
     }
 
     .navbar__inner {
@@ -235,12 +256,14 @@
       justify-content: space-between;
       align-items: center;
       height: 78px;
+      width: 100%;
     }
 
     .navbar__brand-wrap {
       display: flex;
       align-items: center;
       gap: 18px;
+      min-width: 0;
     }
 
     .navbar__logo {
@@ -266,6 +289,7 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--accent-blue);
+      white-space: nowrap;
     }
 
     .navbar__trust-badge {
@@ -285,6 +309,7 @@
       font-size: 11px;
       font-weight: 700;
       color: var(--gray-700);
+      white-space: nowrap;
     }
 
     .navbar__nav {
@@ -333,6 +358,7 @@
       cursor: pointer;
       padding: 8px;
       color: var(--gray-800);
+      flex-shrink: 0;
     }
 
     .mobile-drawer {
@@ -373,6 +399,8 @@
       overflow: hidden;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       user-select: none;
+      width: 100%;
+      max-width: 100%;
     }
 
     .hero__glow {
@@ -381,6 +409,7 @@
       left: 50%;
       transform: translateX(-50%);
       width: 850px;
+      max-width: 100vw;
       height: 550px;
       background: radial-gradient(circle, rgba(14, 165, 233, 0.22) 0%, rgba(2, 132, 199, 0.05) 60%, transparent 80%);
       filter: blur(80px);
@@ -392,6 +421,8 @@
       position: relative;
       z-index: 2;
       width: 100%;
+      max-width: 100%;
+      overflow: hidden;
     }
 
     .hero__slide {
@@ -399,6 +430,8 @@
       opacity: 0;
       transform: translateY(14px);
       transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      width: 100%;
+      max-width: 100%;
     }
 
     .hero__slide.active {
@@ -413,6 +446,7 @@
         opacity: 0;
         transform: translateY(16px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -423,6 +457,7 @@
       text-align: center;
       max-width: 980px;
       margin: 0 auto;
+      width: 100%;
     }
 
     .hero__top-meta {
@@ -474,6 +509,7 @@
       background: linear-gradient(180deg, #FFFFFF 30%, #CFE6FA 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      word-break: break-word;
     }
 
     .hero__lead {
@@ -499,6 +535,7 @@
       gap: 18px;
       flex-wrap: wrap;
       margin-bottom: 44px;
+      width: 100%;
     }
 
     .hero__proof-row {
@@ -514,6 +551,7 @@
       backdrop-filter: blur(8px);
       max-width: 940px;
       margin: 0 auto;
+      width: 100%;
     }
 
     .hero__proof-item {
@@ -539,6 +577,8 @@
       position: relative;
       z-index: 10;
       margin-top: 48px;
+      width: 100%;
+      max-width: 100%;
     }
 
     .hero__tabs {
@@ -549,11 +589,13 @@
       flex-wrap: wrap;
       max-width: 860px;
       margin: 0 auto;
+      width: 100%;
     }
 
     .hero__tab {
-      flex: 1;
-      min-width: 220px;
+      flex: 1 1 220px;
+      min-width: 0;
+      max-width: 100%;
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-md);
@@ -564,6 +606,7 @@
       position: relative;
       overflow: hidden;
       outline: none;
+      box-sizing: border-box;
     }
 
     .hero__tab:hover {
@@ -617,8 +660,13 @@
     }
 
     @keyframes heroTabProgress {
-      from { width: 0%; }
-      to { width: 100%; }
+      from {
+        width: 0%;
+      }
+
+      to {
+        width: 100%;
+      }
     }
 
     /* ==========================================================================
@@ -628,6 +676,7 @@
       background: #FFFFFF;
       padding: 48px 0;
       border-bottom: 1px solid var(--gray-200);
+      width: 100%;
     }
 
     .key-numbers-grid {
@@ -643,6 +692,7 @@
       padding: 28px 24px;
       text-align: center;
       transition: all 0.25s ease;
+      box-sizing: border-box;
     }
 
     .key-number-card:hover {
@@ -681,6 +731,7 @@
       background: #F8FAFC;
       padding: 96px 0;
       border-bottom: 1px solid var(--gray-200);
+      width: 100%;
     }
 
     .platforms-grid {
@@ -703,6 +754,8 @@
       box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
+      box-sizing: border-box;
+      max-width: 100%;
     }
 
     .pcard:hover {
@@ -711,15 +764,16 @@
       box-shadow: 0 16px 36px -4px rgba(2, 132, 199, 0.14);
     }
 
-    /* Row 1: Header (Logo + Domain Pill) - EXACT height: 42px */
+    /* Row 1: Header (Logo + Domain Pill) */
     .pcard__head {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 42px;
+      min-height: 42px;
       margin-bottom: 16px;
       border-bottom: 1px solid #F1F5F9;
       padding-bottom: 12px;
+      gap: 8px;
     }
 
     .pcard__logo-box {
@@ -730,6 +784,7 @@
       justify-content: center;
       border-radius: 6px;
       padding: 4px 8px;
+      flex-shrink: 0;
     }
 
     .pcard__logo-box--light {
@@ -760,9 +815,9 @@
       white-space: nowrap;
     }
 
-    /* Row 2: Title & Category Role - EXACT height: 58px */
+    /* Row 2: Title & Category Role */
     .pcard__title-wrap {
-      height: 58px;
+      min-height: 58px;
       margin-bottom: 12px;
       display: flex;
       flex-direction: column;
@@ -775,6 +830,7 @@
       color: var(--gray-900);
       line-height: 1.25;
       margin-bottom: 4px;
+      word-break: break-word;
     }
 
     .pcard__role {
@@ -784,7 +840,7 @@
       line-height: 1.3;
     }
 
-    /* Row 3: Description - EXACT height: 96px */
+    /* Row 3: Description */
     .pcard__what {
       font-size: 13px;
       color: var(--gray-600);
@@ -794,7 +850,7 @@
       margin-bottom: 14px;
     }
 
-    /* Row 4: Extends To - EXACT height: 58px */
+    /* Row 4: Extends To */
     .pcard__extends {
       font-size: 12px;
       color: var(--gray-500);
@@ -814,7 +870,7 @@
       margin-right: 4px;
     }
 
-    /* Row 5: Metric Box - EXACT height: 68px */
+    /* Row 5: Metric Box */
     .pcard__metric {
       background: var(--emerald-50);
       border: 1px solid rgba(5, 150, 105, 0.25);
@@ -838,7 +894,7 @@
       margin-top: 1px;
     }
 
-    /* Row 6: Link Footer - Push to bottom */
+    /* Row 6: Link Footer */
     .pcard__link-wrap {
       margin-top: auto;
       padding-top: 12px;
@@ -867,6 +923,7 @@
       background: #FFFFFF;
       padding: 96px 0;
       border-bottom: 1px solid var(--gray-200);
+      width: 100%;
     }
 
     .case-grid {
@@ -883,6 +940,8 @@
       display: flex;
       flex-direction: column;
       transition: all 0.25s ease;
+      box-sizing: border-box;
+      max-width: 100%;
     }
 
     .case-card:hover {
@@ -958,6 +1017,7 @@
       color: #FFFFFF;
       padding: 104px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      width: 100%;
     }
 
     .approach-grid {
@@ -1022,6 +1082,8 @@
       padding: 40px 36px;
       backdrop-filter: blur(12px);
       position: relative;
+      box-sizing: border-box;
+      max-width: 100%;
     }
 
     .approach-quote-text {
@@ -1054,6 +1116,7 @@
       background: #FFFFFF;
       padding: 96px 0;
       border-bottom: 1px solid var(--gray-200);
+      width: 100%;
     }
 
     .advantage-grid {
@@ -1079,6 +1142,8 @@
       border-left: 4px solid var(--accent-blue);
       border-radius: var(--radius-md);
       padding: 32px 28px;
+      box-sizing: border-box;
+      max-width: 100%;
     }
 
     .advantage-quote-text {
@@ -1107,6 +1172,7 @@
       background: var(--gray-50);
       padding: 96px 0;
       border-bottom: 1px solid var(--gray-200);
+      width: 100%;
     }
 
     .foundations-grid {
@@ -1123,6 +1189,8 @@
       display: flex;
       flex-direction: column;
       transition: all 0.25s ease;
+      box-sizing: border-box;
+      max-width: 100%;
     }
 
     .foundation-card:hover {
@@ -1160,6 +1228,7 @@
       background: #FFFFFF;
       padding: 96px 0;
       border-bottom: 1px solid var(--gray-200);
+      width: 100%;
     }
 
     .ai-grid {
@@ -1175,6 +1244,8 @@
       padding: 32px 24px;
       text-align: center;
       transition: all 0.25s ease;
+      box-sizing: border-box;
+      max-width: 100%;
     }
 
     .ai-card:hover {
@@ -1210,6 +1281,7 @@
       background: #F8FAFC;
       padding: 88px 0;
       border-bottom: 1px solid var(--gray-200);
+      width: 100%;
     }
 
     .clients-grid {
@@ -1232,6 +1304,8 @@
       justify-content: center;
       box-shadow: var(--shadow-sm);
       transition: all 0.2s ease;
+      box-sizing: border-box;
+      max-width: 100%;
     }
 
     .client-pill:hover {
@@ -1251,11 +1325,13 @@
       text-align: center;
       position: relative;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      width: 100%;
     }
 
     .closing-box {
       max-width: 860px;
       margin: 0 auto;
+      width: 100%;
     }
 
     .closing-title {
@@ -1268,6 +1344,7 @@
       background: linear-gradient(180deg, #FFFFFF 40%, #CFE6FA 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      word-break: break-word;
     }
 
     .closing-sub {
@@ -1285,6 +1362,8 @@
       max-width: 720px;
       margin: 0 auto 40px auto;
       backdrop-filter: blur(8px);
+      box-sizing: border-box;
+      width: 100%;
     }
 
     .closing-quote-text {
@@ -1308,6 +1387,7 @@
 
     .closing-btn-wrap {
       margin-bottom: 24px;
+      width: 100%;
     }
 
     .closing-motto {
@@ -1326,6 +1406,8 @@
       color: var(--gray-400);
       padding: 80px 0 40px;
       font-size: 14px;
+      width: 100%;
+      overflow: hidden;
     }
 
     .footer-grid {
@@ -1333,6 +1415,7 @@
       grid-template-columns: 1.4fr 1fr 1.2fr;
       gap: 56px;
       margin-bottom: 56px;
+      width: 100%;
     }
 
     .footer-brand__logo {
@@ -1386,6 +1469,7 @@
       gap: 12px;
       margin-bottom: 14px;
       line-height: 1.5;
+      word-break: break-word;
     }
 
     .footer-badges {
@@ -1394,6 +1478,7 @@
       gap: 14px;
       margin-top: 24px;
       flex-wrap: wrap;
+      width: 100%;
     }
 
     .footer-badge-img {
@@ -1401,6 +1486,8 @@
       background: #FFFFFF;
       padding: 4px;
       border-radius: 4px;
+      max-width: 100%;
+      object-fit: contain;
     }
 
     .footer-bottom {
@@ -1413,58 +1500,80 @@
       gap: 16px;
       font-size: 13px;
       color: var(--gray-500);
+      width: 100%;
     }
 
     /* ==========================================================================
-       RESPONSIVE DESIGN
+       RESPONSIVE DESIGN (FLUID, SCREEN FIT, ZERO HORIZONTAL OVERFLOW)
        ========================================================================== */
     @media (max-width: 1100px) {
       .platforms-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .ai-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .foundations-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .key-numbers-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .clients-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
 
     @media (max-width: 860px) {
-      .navbar__nav, .navbar__actions {
+
+      .navbar__nav,
+      .navbar__actions {
         display: none;
       }
+
       .navbar__hamburger {
         display: block;
       }
+
       .hero__title {
-        font-size: 40px;
+        font-size: 38px;
       }
+
       .hero__tabs {
         flex-direction: column;
         width: 100%;
+        gap: 10px;
       }
+
       .hero__tab {
         width: 100%;
+        min-width: 0;
+        flex: none;
       }
+
       .approach-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
       }
+
       .advantage-grid {
         grid-template-columns: 1fr;
+        gap: 36px;
       }
+
       .case-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
       }
+
       .foundations-grid {
         grid-template-columns: 1fr;
       }
+
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 36px;
@@ -1472,28 +1581,313 @@
     }
 
     @media (max-width: 600px) {
-      .platforms-grid {
-        grid-template-columns: 1fr;
+      .container {
+        padding-left: 18px;
+        padding-right: 18px;
       }
-      .key-numbers-grid {
-        grid-template-columns: 1fr;
+
+      .compliance-bar {
+        padding: 7px 0;
       }
-      .ai-grid {
-        grid-template-columns: 1fr;
+
+      .compliance-bar__inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 6px;
       }
-      .clients-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+      .compliance-bar__left {
+        justify-content: center;
+        font-size: 11px;
       }
+
+      .compliance-bar__right {
+        font-size: 11px;
+      }
+
+      .navbar__inner {
+        height: 68px;
+      }
+
+      .navbar__logo {
+        height: 38px;
+      }
+
+      .navbar__divider {
+        display: none;
+      }
+
+      .navbar__signature-badge {
+        display: none;
+      }
+
+      .section-header {
+        margin-bottom: 36px;
+      }
+
+      .section-header h2 {
+        font-size: 26px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .section-header p {
+        font-size: 15px;
+      }
+
+      .hero {
+        padding: 56px 0 48px;
+      }
+
+      .hero__title {
+        font-size: 29px;
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+
+      .hero__lead {
+        font-size: 15px;
+        line-height: 1.55;
+        margin-bottom: 14px;
+      }
+
+      .hero__kicker {
+        font-size: 13.5px;
+        margin-bottom: 24px;
+      }
+
+      .hero__ctas {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        margin-bottom: 32px;
+      }
+
+      .hero__ctas .btn {
+        width: 100%;
+        white-space: normal;
+        padding: 13px 20px;
+        font-size: 14.5px;
+      }
+
       .hero__proof-row {
         flex-direction: column;
+        align-items: flex-start;
         border-radius: var(--radius-md);
+        padding: 14px 18px;
+        gap: 10px;
       }
+
+      .hero__proof-item {
+        font-size: 12.5px;
+      }
+
       .hero__proof-sep {
         display: none;
+      }
+
+      .hero__carousel-controls {
+        margin-top: 36px;
+      }
+
+      .hero__tab {
+        padding: 12px 14px;
+      }
+
+      .hero__tab-text {
+        font-size: 12.5px;
+      }
+
+      .key-numbers-sec {
+        padding: 36px 0;
+      }
+
+      .key-numbers-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .key-number-card {
+        padding: 20px 16px;
+      }
+
+      .key-number-card__val {
+        font-size: 34px;
+      }
+
+      .platforms-sec {
+        padding: 60px 0;
+      }
+
+      .platforms-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .pcard {
+        min-height: auto;
+        padding: 20px;
+      }
+
+      .pcard__head {
+        min-height: auto;
+        padding-bottom: 10px;
+      }
+
+      .pcard__title-wrap {
+        min-height: auto;
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      .pcard__what {
+        height: auto;
+        margin-bottom: 12px;
+      }
+
+      .pcard__extends {
+        height: auto;
+        margin-bottom: 12px;
+      }
+
+      .pcard__metric {
+        height: auto;
+        margin-bottom: 14px;
+      }
+
+      .case-studies-sec {
+        padding: 60px 0;
+      }
+
+      .case-card {
+        padding: 24px 18px;
+      }
+
+      .case-card__title {
+        font-size: 19px;
+        margin-bottom: 14px;
+      }
+
+      .approach-sec {
+        padding: 60px 0;
+      }
+
+      .approach-content h2 {
+        font-size: 26px;
+      }
+
+      .approach-sub {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+
+      .approach-lead-p {
+        font-size: 14.5px;
+        line-height: 1.6;
+      }
+
+      .outcome-bullets li {
+        font-size: 14px;
+      }
+
+      .approach-quote-box {
+        padding: 24px 20px;
+      }
+
+      .approach-quote-text {
+        font-size: 15.5px;
+      }
+
+      .advantage-sec {
+        padding: 60px 0;
+      }
+
+      .advantage-quote-card {
+        padding: 22px 18px;
+      }
+
+      .advantage-quote-text {
+        font-size: 15.5px;
+      }
+
+      .foundations-sec {
+        padding: 60px 0;
+      }
+
+      .foundation-card {
+        padding: 24px 18px;
+      }
+
+      .ai-sec {
+        padding: 60px 0;
+      }
+
+      .ai-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .ai-card {
+        padding: 24px 18px;
+      }
+
+      .clients-sec {
+        padding: 60px 0;
+      }
+
+      .clients-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .client-pill {
+        padding: 12px 16px;
+        font-size: 13px;
+      }
+
+      .closing-sec {
+        padding: 64px 0;
+      }
+
+      .closing-title {
+        font-size: 28px;
+        line-height: 1.25;
+      }
+
+      .closing-sub {
+        font-size: 15px;
+        margin-bottom: 24px;
+      }
+
+      .closing-quote {
+        padding: 20px 16px;
+        margin-bottom: 28px;
+      }
+
+      .closing-quote-text {
+        font-size: 14.5px;
+      }
+
+      .closing-btn-wrap .btn {
+        width: 100%;
+        white-space: normal;
+        padding: 14px 20px !important;
+        font-size: 14.5px !important;
+      }
+
+      .footer {
+        padding: 56px 0 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
       }
     }
   </style>
 </head>
+
 <body>
 
   <!-- 1. TOP COMPLIANCE & TRUST BAR -->
@@ -1554,7 +1948,8 @@
         <a href="#about" class="mobile-drawer__link" onclick="toggleMenu()">About Us</a>
         <a href="#clients" class="mobile-drawer__link" onclick="toggleMenu()">Clients</a>
       </div>
-      <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center;" onclick="toggleMenu()">Start a Conversation</a>
+      <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center;" onclick="toggleMenu()">Start a
+        Conversation</a>
     </div>
   </header>
 
@@ -1563,7 +1958,7 @@
     <div class="hero__glow"></div>
 
     <div class="hero__slides-wrapper">
-      
+
       <!-- Slide 1: Smart Governance & Bharat at Scale (Primary SEO H1) -->
       <div class="hero__slide active" id="heroSlide0" data-slide="0">
         <div class="container hero__content">
@@ -1576,7 +1971,9 @@
           <h1 class="hero__title">Powering the Platforms That Power India</h1>
 
           <p class="hero__lead">
-            Modernizing public administration through intelligent GovTech. From automated citizen service delivery and grievance redressal to inter-departmental integration &mdash; we engineer sovereign platforms built for high-stakes reliability.
+            Modernizing public administration through intelligent GovTech. From automated citizen service delivery and
+            grievance redressal to inter-departmental integration &mdash; we engineer sovereign platforms built for
+            high-stakes reliability.
           </p>
 
           <div class="hero__kicker">
@@ -1619,7 +2016,9 @@
           <h2 class="hero__title">AI-Embedded Enterprise Technology. Delivered at Scale.</h2>
 
           <p class="hero__lead">
-            From intelligent automation and AI-integrated applications to robust ERP, digital works management, and supply chain tracking &mdash; E-Connect architects software ecosystems that reduce manual workload and surface smarter decisions.
+            From intelligent automation and AI-integrated applications to robust ERP, digital works management, and
+            supply chain tracking &mdash; E-Connect architects software ecosystems that reduce manual workload and
+            surface smarter decisions.
           </p>
 
           <div class="hero__kicker">
@@ -1663,7 +2062,9 @@
           <h2 class="hero__title">Three Decades of Proven Enterprise Delivery Excellence</h2>
 
           <p class="hero__lead">
-            Your long-term technology transformation partner &mdash; from strategy to execution. 500+ in-house engineers, architects, and domain practitioners delivering full-lifecycle software from our 50,000 sq. ft campus with zero delivery compromise.
+            Your long-term technology transformation partner &mdash; from strategy to execution. 500+ in-house
+            engineers, architects, and domain practitioners delivering full-lifecycle software from our 50,000 sq. ft
+            campus with zero delivery compromise.
           </p>
 
           <div class="hero__kicker">
@@ -1701,17 +2102,26 @@
     <div class="hero__carousel-controls">
       <div class="container">
         <div class="hero__tabs" role="tablist" aria-label="Hero Carousel Navigation">
-          <button class="hero__tab active" id="tab0" onclick="goToSlide(0)" role="tab" aria-selected="true" aria-controls="heroSlide0">
+          <button class="hero__tab active" id="tab0" onclick="goToSlide(0)" role="tab" aria-selected="true"
+            aria-controls="heroSlide0">
             <span class="hero__tab-text">01 Smart Governance</span>
-            <div class="hero__tab-progress"><div class="hero__tab-bar"></div></div>
+            <div class="hero__tab-progress">
+              <div class="hero__tab-bar"></div>
+            </div>
           </button>
-          <button class="hero__tab" id="tab1" onclick="goToSlide(1)" role="tab" aria-selected="false" aria-controls="heroSlide1">
+          <button class="hero__tab" id="tab1" onclick="goToSlide(1)" role="tab" aria-selected="false"
+            aria-controls="heroSlide1">
             <span class="hero__tab-text">02 Enterprise &amp; AI</span>
-            <div class="hero__tab-progress"><div class="hero__tab-bar"></div></div>
+            <div class="hero__tab-progress">
+              <div class="hero__tab-bar"></div>
+            </div>
           </button>
-          <button class="hero__tab" id="tab2" onclick="goToSlide(2)" role="tab" aria-selected="false" aria-controls="heroSlide2">
+          <button class="hero__tab" id="tab2" onclick="goToSlide(2)" role="tab" aria-selected="false"
+            aria-controls="heroSlide2">
             <span class="hero__tab-text">03 35+ Years Delivery</span>
-            <div class="hero__tab-progress"><div class="hero__tab-bar"></div></div>
+            <div class="hero__tab-progress">
+              <div class="hero__tab-bar"></div>
+            </div>
           </button>
         </div>
       </div>
@@ -1755,7 +2165,8 @@
       <div class="section-header">
         <span class="badge-tag">Platform Portfolio</span>
         <h2>Pre-Built Platforms. Configured to Your Workflow.</h2>
-        <p>Battle-tested software suites built around established administrative, commercial, and financial processes.</p>
+        <p>Battle-tested software suites built around established administrative, commercial, and financial processes.
+        </p>
       </div>
 
       <div class="platforms-grid">
@@ -1773,7 +2184,8 @@
             <div class="pcard__role">Public Service Delivery Portal</div>
           </div>
           <div class="pcard__what">
-            <strong>What It Does:</strong> Launches new citizen services in days using a no-code form builder, OCR document scanning, biometric checks, and regional chatbots.
+            <strong>What It Does:</strong> Launches new citizen services in days using a no-code form builder, OCR
+            document scanning, biometric checks, and regional chatbots.
           </div>
           <div class="pcard__extends">
             <span class="pcard__extends-label">Extends to:</span>
@@ -1804,7 +2216,8 @@
             <div class="pcard__role">Grievance &amp; Helpdesk System</div>
           </div>
           <div class="pcard__what">
-            <strong>What It Does:</strong> Collects complaints via phone, WhatsApp, web forms, and SMS. Automatically routes tickets to local officers with timed SLA escalation.
+            <strong>What It Does:</strong> Collects complaints via phone, WhatsApp, web forms, and SMS. Automatically
+            routes tickets to local officers with timed SLA escalation.
           </div>
           <div class="pcard__extends">
             <span class="pcard__extends-label">Extends to:</span>
@@ -1835,7 +2248,8 @@
             <div class="pcard__role">Enterprise ERP Suite</div>
           </div>
           <div class="pcard__what">
-            <strong>What It Does:</strong> Unifies General Ledger accounting, HRMS/payroll, provident funds (CPF), procurement, and store inventory under strict audit rules.
+            <strong>What It Does:</strong> Unifies General Ledger accounting, HRMS/payroll, provident funds (CPF),
+            procurement, and store inventory under strict audit rules.
           </div>
           <div class="pcard__extends">
             <span class="pcard__extends-label">Extends to:</span>
@@ -1866,7 +2280,8 @@
             <div class="pcard__role">Works Mgmt &amp; Digital MB</div>
           </div>
           <div class="pcard__what">
-            <strong>What It Does:</strong> Tracks civil construction through all six stages. Replaces paper registers with tamper-evident Digital Measurement Books linked to contractor billing.
+            <strong>What It Does:</strong> Tracks civil construction through all six stages. Replaces paper registers
+            with tamper-evident Digital Measurement Books linked to contractor billing.
           </div>
           <div class="pcard__extends">
             <span class="pcard__extends-label">Extends to:</span>
@@ -1884,20 +2299,23 @@
           </div>
         </div>
 
-        <!-- CARD 5: SupplyX & IERMS -->
+        <!-- CARD 5: SupplyX  -->
         <div class="pcard">
           <div class="pcard__head">
             <div class="pcard__logo-box pcard__logo-box--dark">
-              <span style="font-size: 12.5px; font-weight: 800; color: #F59E0B; letter-spacing: 0.02em;">SupplyX &amp; IERMS</span>
+              <span style="font-size: 12.5px; font-weight: 800; color: #F59E0B; letter-spacing: 0.02em;">SupplyX
+              </span>
             </div>
-            <span class="pcard__domain-pill" style="background: #FEF3C7; color: #B45309; border-color: #FDE68A;">Supply Chain</span>
+            <span class="pcard__domain-pill" style="background: #FEF3C7; color: #B45309; border-color: #FDE68A;">Supply
+              Chain</span>
           </div>
           <div class="pcard__title-wrap">
-            <h3 class="pcard__title">SupplyX &amp; IERMS</h3>
+            <h3 class="pcard__title">SupplyX </h3>
             <div class="pcard__role">Track-and-Trace Inventory</div>
           </div>
           <div class="pcard__what">
-            <strong>What It Does:</strong> Uses 2D barcodes, QR, and RFID to trace inventory from production plants to transport fleets and retail points of sale. Includes mining lease tracking.
+            <strong>What It Does:</strong> Uses 2D barcodes, QR, and RFID to trace inventory from production plants to
+            transport fleets and retail points of sale. Includes mining lease tracking.
           </div>
           <div class="pcard__extends">
             <span class="pcard__extends-label">Extends to:</span>
@@ -1928,7 +2346,8 @@
             <div class="pcard__role">Recruitment &amp; Exam Portal</div>
           </div>
           <div class="pcard__what">
-            <strong>What It Does:</strong> Handles candidate registrations, removes duplicate applications, schedules exam centers, and generates merit offer letters without crashes.
+            <strong>What It Does:</strong> Handles candidate registrations, removes duplicate applications, schedules
+            exam centers, and generates merit offer letters without crashes.
           </div>
           <div class="pcard__extends">
             <span class="pcard__extends-label">Extends to:</span>
@@ -1959,7 +2378,8 @@
             <div class="pcard__role">Online Bidding Platform</div>
           </div>
           <div class="pcard__what">
-            <strong>What It Does:</strong> Runs real-time online auctions with automatic bidding, earnest money (EMD) escrow handling, verified bidder checks, and digital allotments.
+            <strong>What It Does:</strong> Runs real-time online auctions with automatic bidding, earnest money (EMD)
+            escrow handling, verified bidder checks, and digital allotments.
           </div>
           <div class="pcard__extends">
             <span class="pcard__extends-label">Extends to:</span>
@@ -1990,7 +2410,8 @@
             <div class="pcard__role">Data Center &amp; Managed IT</div>
           </div>
           <div class="pcard__what">
-            <strong>What It Does:</strong> Manages data center hardware, hybrid cloud migrations, secure LAN/WAN networking, and 24x7x365 facility maintenance.
+            <strong>What It Does:</strong> Manages data center hardware, hybrid cloud migrations, secure LAN/WAN
+            networking, and 24x7x365 facility maintenance.
           </div>
           <div class="pcard__extends">
             <span class="pcard__extends-label">Extends to:</span>
@@ -2028,15 +2449,18 @@
           <h3 class="case-card__title">Rajasthan Sampark 2.0</h3>
           <div class="case-card__block">
             <div class="case-card__block-label">The Problem</div>
-            <div class="case-card__block-text">Citizen complaints were lost across physical registers in 33 districts with no central tracking.</div>
+            <div class="case-card__block-text">Citizen complaints were lost across physical registers in 33 districts
+              with no central tracking.</div>
           </div>
           <div class="case-card__block">
             <div class="case-card__block-label">The Solution</div>
-            <div class="case-card__block-text">Deployed CitizenConnct with call center, WhatsApp, and web intake, routing directly to local officers.</div>
+            <div class="case-card__block-text">Deployed CitizenConnct with call center, WhatsApp, and web intake,
+              routing directly to local officers.</div>
           </div>
           <div class="case-card__result">
             <div class="case-card__result-label">Measured Outcome</div>
-            <div class="case-card__result-text"><strong>1.72 Crore+ complaints resolved</strong> with full audit trails. In continuous use since 2011.</div>
+            <div class="case-card__result-text"><strong>1.72 Crore+ complaints resolved</strong> with full audit trails.
+              In continuous use since 2011.</div>
           </div>
         </div>
 
@@ -2046,15 +2470,18 @@
           <h3 class="case-card__title">Punjab Sewa Kendras</h3>
           <div class="case-card__block">
             <div class="case-card__block-label">The Problem</div>
-            <div class="case-card__block-text">Rolling out citizen schemes required months of custom coding and physical paper trails across rural counters.</div>
+            <div class="case-card__block-text">Rolling out citizen schemes required months of custom coding and physical
+              paper trails across rural counters.</div>
           </div>
           <div class="case-card__block">
             <div class="case-card__block-label">The Solution</div>
-            <div class="case-card__block-text">Implemented CitizenServ with a no-code form builder and automated document scanning.</div>
+            <div class="case-card__block-text">Implemented CitizenServ with a no-code form builder and automated
+              document scanning.</div>
           </div>
           <div class="case-card__result">
             <div class="case-card__result-label">Measured Outcome</div>
-            <div class="case-card__result-text"><strong>200+ services live online</strong>, cutting new scheme rollout times to 2–5 days.</div>
+            <div class="case-card__result-text"><strong>200+ services live online</strong>, cutting new scheme rollout
+              times to 2–5 days.</div>
           </div>
         </div>
 
@@ -2064,15 +2491,18 @@
           <h3 class="case-card__title">RajERP (RISL)</h3>
           <div class="case-card__block">
             <div class="case-card__block-label">The Problem</div>
-            <div class="case-card__block-text">Disconnected payroll, accounting, and inventory across government corporations and statutory boards.</div>
+            <div class="case-card__block-text">Disconnected payroll, accounting, and inventory across government
+              corporations and statutory boards.</div>
           </div>
           <div class="case-card__block">
             <div class="case-card__block-label">The Solution</div>
-            <div class="case-card__block-text">Deployed &#2312;prashasan as a central ERP for finances, payroll, employee trusts, and inventory.</div>
+            <div class="case-card__block-text">Deployed &#2312;prashasan as a central ERP for finances, payroll,
+              employee trusts, and inventory.</div>
           </div>
           <div class="case-card__result">
             <div class="case-card__result-label">Measured Outcome</div>
-            <div class="case-card__result-text"><strong>100,000+ active enterprise users</strong> managing operations with clean audits since 2015.</div>
+            <div class="case-card__result-text"><strong>100,000+ active enterprise users</strong> managing operations
+              with clean audits since 2015.</div>
           </div>
         </div>
       </div>
@@ -2097,13 +2527,16 @@
           </ul>
 
           <p class="approach-lead-p">
-            At E-Connect Solutions, we engineer that trust. For over 35 years, our 500+ engineers in Udaipur have architected the sovereign platforms that form the digital backbone of governance and enterprise operations across India.
+            At E-Connect Solutions, we engineer that trust. For over 35 years, our 500+ engineers in Udaipur have
+            architected the sovereign platforms that form the digital backbone of governance and enterprise operations
+            across India.
           </p>
         </div>
 
         <div class="approach-quote-box">
           <div class="approach-quote-text">
-            &ldquo;Our purpose is straightforward: to translate complex operational challenges into sustainable, reliable advantages &mdash; systems that serve millions every day without compromise.&rdquo;
+            &ldquo;Our purpose is straightforward: to translate complex operational challenges into sustainable,
+            reliable advantages &mdash; systems that serve millions every day without compromise.&rdquo;
           </div>
           <div class="approach-quote-author">Manoj Agrawal</div>
           <div class="approach-quote-title">CEO &amp; Founder, E-Connect Solutions</div>
@@ -2123,19 +2556,22 @@
       <div class="advantage-grid">
         <div class="advantage-body">
           <p>
-            Over 35 years and 25+ industry verticals, we have codified <strong>500+ documented business processes</strong> across governance, civil works, procurement, and financial control.
+            Over 35 years and 25+ industry verticals, we have codified <strong>500+ documented business
+              processes</strong> across governance, civil works, procurement, and financial control.
           </p>
           <p>
-            When an enterprise or department partners with E-Connect, you don't pay for trial-and-error. You deploy battle-tested architectural patterns proven under heavy production scale.
+            When an enterprise or department partners with E-Connect, you don't pay for trial-and-error. You deploy
+            battle-tested architectural patterns proven under heavy production scale.
           </p>
         </div>
 
         <div class="advantage-quote-card">
           <div class="advantage-quote-text">
-            &ldquo;Most IT vendors start with code. We start with the 500+ workflows we've already stress-tested across India. That is why our platforms deploy in days, not months.&rdquo;
+            &ldquo;Most IT vendors start with code. We start with the 500+ workflows we've already stress-tested across
+            India. That is why our platforms deploy in days, not months.&rdquo;
           </div>
-          <div class="advantage-quote-author">Bhuvnesh Jain</div>
-          <div class="advantage-quote-title">Head of Products, E-Connect Solutions</div>
+          <div class="advantage-quote-author">Utkarsh Rustogi</div>
+          <div class="advantage-quote-title">Director - Strategy & Growth, E-Connect Solutions</div>
         </div>
       </div>
     </div>
@@ -2156,7 +2592,8 @@
           <div class="foundation-card__num">01</div>
           <h3 class="foundation-card__title">CMMI Level 5 Maturity</h3>
           <div class="foundation-card__body">
-            The highest process maturity standard globally. Assures rigorous quality control, predictable timelines, and audit-ready security at every phase of delivery.
+            The highest process maturity standard globally. Assures rigorous quality control, predictable timelines, and
+            audit-ready security at every phase of delivery.
           </div>
         </div>
 
@@ -2165,7 +2602,8 @@
           <div class="foundation-card__num">02</div>
           <h3 class="foundation-card__title">500+ In-House Engineers</h3>
           <div class="foundation-card__body">
-            Zero subcontracting uncertainty. Our full-time engineering and product teams work collaboratively under one roof from our 50,000 sq. ft Udaipur campus.
+            Zero subcontracting uncertainty. Our full-time engineering and product teams work collaboratively under one
+            roof from our 50,000 sq. ft Udaipur campus.
           </div>
         </div>
 
@@ -2174,7 +2612,8 @@
           <div class="foundation-card__num">03</div>
           <h3 class="foundation-card__title">Sovereign Data Pride</h3>
           <div class="foundation-card__body">
-            Full compliance with India's DPDP Act, Cert-IN security benchmarks, and strict on-premise, state cloud, or hybrid data residency requirements.
+            Full compliance with India's DPDP Act, Cert-IN security benchmarks, and strict on-premise, state cloud, or
+            hybrid data residency requirements.
           </div>
         </div>
 
@@ -2183,7 +2622,8 @@
           <div class="foundation-card__num">04</div>
           <h3 class="foundation-card__title">35+ Years Domain Depth</h3>
           <div class="foundation-card__body">
-            Battle-tested delivery and deep regulatory insight across public administration, enterprise ERP, civil infrastructure, and regulated supply chains since 1991.
+            Battle-tested delivery and deep regulatory insight across public administration, enterprise ERP, civil
+            infrastructure, and regulated supply chains since 1991.
           </div>
         </div>
       </div>
@@ -2204,28 +2644,32 @@
         <div class="ai-card">
           <div class="ai-card__icon">&#128196;</div>
           <h3 class="ai-card__title">Intelligent OCR</h3>
-          <div class="ai-card__desc">Automated extraction and verification from Aadhaar, PAN, voter cards, and property deeds.</div>
+          <div class="ai-card__desc">Automated extraction and verification from Aadhaar, PAN, voter cards, and property
+            deeds.</div>
         </div>
 
         <!-- Card 2 -->
         <div class="ai-card">
           <div class="ai-card__icon">&#128100;</div>
           <h3 class="ai-card__title">Biometric Liveness</h3>
-          <div class="ai-card__desc">Face match and anti-spoof checks preventing fraudulent pension and scheme withdrawals.</div>
+          <div class="ai-card__desc">Face match and anti-spoof checks preventing fraudulent pension and scheme
+            withdrawals.</div>
         </div>
 
         <!-- Card 3 -->
         <div class="ai-card">
           <div class="ai-card__icon">&#128172;</div>
           <h3 class="ai-card__title">Indic Chatbots</h3>
-          <div class="ai-card__desc">Multilingual conversational AI guiding citizens in Hindi, Punjabi, and regional languages.</div>
+          <div class="ai-card__desc">Multilingual conversational AI guiding citizens in Hindi, Punjabi, and regional
+            languages.</div>
         </div>
 
         <!-- Card 4 -->
         <div class="ai-card">
           <div class="ai-card__icon">&#128640;</div>
           <h3 class="ai-card__title">Predictive Routing</h3>
-          <div class="ai-card__desc">NLP that automatically classifies citizen complaints and routes them directly to the right department.</div>
+          <div class="ai-card__desc">NLP that automatically classifies citizen complaints and routes them directly to
+            the right department.</div>
         </div>
       </div>
     </div>
@@ -2257,18 +2701,22 @@
     <div class="container closing-box">
       <span class="badge-tag badge-tag--dark">Ready to Build</span>
       <h2 class="closing-title">Engineering the Systems That Power India</h2>
-      <p class="closing-sub">Whether modernizing legacy public systems, deploying a state-wide portal, or upgrading enterprise operations &mdash; partner with an engineering firm that has delivered without compromise for 35 years.</p>
+      <p class="closing-sub">Whether modernizing legacy public systems, deploying a state-wide portal, or upgrading
+        enterprise operations &mdash; partner with an engineering firm that has delivered without compromise for 35
+        years.</p>
 
       <div class="closing-quote">
         <div class="closing-quote-text">
-          &ldquo;Our standard of success is simple: our clients' operations run reliably, their teams gain capability, and the citizen is served with transparency.&rdquo;
+          &ldquo;Our standard of success is simple: our clients' operations run reliably, their teams gain capability,
+          and the citizen is served with transparency.&rdquo;
         </div>
         <div class="closing-quote-author">Jaimin Patel</div>
         <div class="closing-quote-title">Chief Business Officer &amp; Co-Founder</div>
       </div>
 
       <div class="closing-btn-wrap">
-        <a href="mailto:sales@e-connectsolutions.com" class="btn btn-primary" style="font-size: 16px; padding: 16px 36px;">Schedule an Architecture Walkthrough</a>
+        <a href="mailto:sales@e-connectsolutions.com" class="btn btn-primary"
+          style="font-size: 16px; padding: 16px 36px;">Schedule an Architecture Walkthrough</a>
       </div>
 
       <div class="closing-motto">WE CONNECT &amp; DELIVER</div>
@@ -2284,7 +2732,8 @@
           <img src="e-connect-logo_white.png" alt="E-Connect Solutions" class="footer-brand__logo">
           <p class="footer-brand__summary">
             <strong>E-Connect Solutions Pvt. Ltd.</strong><br>
-            CMMI Level 5 software engineering organization. Powering mission-critical platforms across citizen services, enterprise ERP, and public works since 1991.<br>
+            CMMI Level 5 software engineering organization. Powering mission-critical platforms across citizen services,
+            enterprise ERP, and public works since 1991.<br>
             <em>Built in Udaipur &bull; Delivering for India</em>
           </p>
           <div class="footer-brand__motto">We Connect &amp; Deliver</div>
@@ -2304,7 +2753,7 @@
             <li><a href="#platforms">CitizenConnct (Grievance)</a></li>
             <li><a href="#platforms">&#2312;prashasan (Enterprise ERP)</a></li>
             <li><a href="#platforms">WorkX (Works &amp; DMB)</a></li>
-            <li><a href="#platforms">SupplyX &amp; IERMS (Logistics)</a></li>
+            <li><a href="#platforms">SupplyX (Logistics)</a></li>
             <li><a href="#platforms">SELCT (Recruitment Engine)</a></li>
           </ul>
         </div>
@@ -2376,7 +2825,7 @@
         const isActive = idx === currentSlide;
         tab.classList.toggle('active', isActive);
         tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
-        
+
         // Reset CSS progress bar animation
         const bar = tab.querySelector('.hero__tab-bar');
         if (bar) {
@@ -2455,4 +2904,5 @@
     });
   </script>
 </body>
+
 </html>
