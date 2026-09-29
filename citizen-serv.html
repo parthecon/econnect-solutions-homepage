@@ -739,6 +739,10 @@
       font-weight: 500;
     }
 
+    /* Mobile preview card container */
+    .hero-serv__mobile-card {
+      display: none;
+    }
 
     /* ==========================================================================
        02 / PLATFORM OVERVIEW (4 Feature Cards)
@@ -1784,17 +1788,7 @@
        ========================================================================== */
     @media (max-width: 1024px) {
       .hero-serv {
-        background-color: #07101C;
-        background-image:
-          linear-gradient(180deg,
-            rgba(7, 16, 28, 0.88) 0%,
-            rgba(7, 16, 28, 0.78) 45%,
-            rgba(7, 16, 28, 0.94) 100%),
-          url('hero.png');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        padding: 64px 0 56px;
+        padding: 72px 0 64px;
         min-height: auto;
       }
 
@@ -1807,12 +1801,18 @@
         max-width: 100%;
       }
 
-      .hero-serv__visual {
-        display: none !important;
+      .hero-serv__visual-anchor {
+        height: auto;
+        flex-direction: row;
+        gap: 16px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
       }
 
-      .hero-serv__visual-anchor {
-        display: none !important;
+      .hero-float-card--top,
+      .hero-float-card--bottom {
+        align-self: auto;
+        margin: 0;
       }
 
       .overview-grid {
@@ -1849,26 +1849,66 @@
 
     @media (max-width: 992px) {
       .hero-serv {
-        background-color: #07101C;
         background-image:
           linear-gradient(180deg,
-            rgba(7, 16, 28, 0.88) 0%,
-            rgba(7, 16, 28, 0.78) 45%,
-            rgba(7, 16, 28, 0.94) 100%),
+            rgba(7, 16, 28, 0.96) 0%,
+            rgba(7, 16, 28, 0.92) 55%,
+            rgba(7, 16, 28, 0.98) 100%),
           url('hero.png');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        padding: 56px 0 48px;
-        min-height: auto;
-      }
-
-      .hero-serv__visual {
-        display: none !important;
+        background-position: 70% center;
       }
 
       .hero-serv__visual-anchor {
-        display: none !important;
+        display: none;
+      }
+
+      .hero-serv__mobile-card {
+        display: block;
+        margin: 24px 0 28px;
+      }
+
+      .hero-serv__mobile-img-wrap {
+        position: relative;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+      }
+
+      .hero-serv__mobile-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        object-position: 80% center;
+      }
+
+      .hero-serv__mobile-badge {
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        background: rgba(7, 16, 28, 0.92);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        color: #FFFFFF;
+        font-size: 11.5px;
+        font-weight: 700;
+        padding: 6px 14px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-serv__mobile-badge .pulse-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #10B981;
+        box-shadow: 0 0 8px #10B981;
+        display: inline-block;
       }
 
       .model-grid {
@@ -2259,6 +2299,7 @@
         <div class="hero-serv__content">
           <div class="hero-serv__brand-row">
             <img src="citizen-serv-logo.png" alt="CitizenServ Logo" class="hero-serv__brand-logo" />
+            <span class="badge-tag badge-tag--dark">01 / Hero</span>
             <span class="hero-serv__badge-pill">&#9881; Configurable E-Governance</span>
             <span class="hero-serv__badge-pill">&#10003; CMMI Level 5 Assured</span>
           </div>
@@ -2283,6 +2324,17 @@
             <a href="#approach" class="btn btn-secondary btn-lg">
               Explore Demo Process
             </a>
+          </div>
+
+          <!-- Mobile Hero Preview Card (Rendered on mobile screens so the citizen & portal artwork is crisp and prominent) -->
+          <div class="hero-serv__mobile-card">
+            <div class="hero-serv__mobile-img-wrap">
+              <img src="hero.png" alt="CitizenServ Platform Live Workflow" class="hero-serv__mobile-img" />
+              <div class="hero-serv__mobile-badge">
+                <span class="pulse-dot"></span>
+                <span>Live Portal &bull; 200+ Services in Punjab</span>
+              </div>
+            </div>
           </div>
 
           <!-- Proof points / Key metrics from Company Profile -->
@@ -2331,7 +2383,7 @@
     <section class="overview-sec" id="overview">
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag">DIGITAL GOVERNANCE &bull; Platform Overview</span>
+          <span class="badge-tag">DIGITAL GOVERNANCE &bull; 02 / Platform Overview</span>
           <h2>A Common Platform for Citizen Service Delivery</h2>
           <p>
             CitizenServ unifies public services, application processing, and back-office workflows into one configurable
@@ -2412,7 +2464,7 @@
     <section class="model-sec" id="model">
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag">E-GOVERNANCE ARCHITECTURE</span>
+          <span class="badge-tag">E-GOVERNANCE ARCHITECTURE &bull; 03</span>
           <h2>Designed for Modern Government Services</h2>
           <p>
             CitizenServ manages the full service lifecycle with configurable workflows, automated scrutiny, and
@@ -2577,7 +2629,7 @@
     <section class="impact-banner" aria-label="Product Impact">
       <div class="impact-banner__glow"></div>
       <div class="container impact-banner__inner">
-        <span class="badge-tag badge-tag--dark" style="margin-bottom: 16px;">Product Impact</span>
+        <span class="badge-tag badge-tag--dark" style="margin-bottom: 16px;">04 / Product Impact</span>
         <h2 class="impact-banner__title">Making Public Services More Accessible</h2>
         <p class="impact-banner__desc">
           Connecting citizens and government departments through structured, transparent, and technology-driven service
@@ -2593,7 +2645,7 @@
       <div class="container">
         <div class="split-layout">
           <div class="split-intro">
-            <span class="badge-tag">PROVIDING CITIZENS</span>
+            <span class="badge-tag">PROVIDING CITIZENS &bull; 05</span>
             <h2>Government Services, Made Easier to Access</h2>
             <p>
               A unified digital window for citizens to discover services, submit applications, and track progress
@@ -2714,7 +2766,7 @@
           </div>
 
           <div class="split-intro">
-            <span class="badge-tag">EMPOWERING YOUR WORKFORCE</span>
+            <span class="badge-tag">EMPOWERING YOUR WORKFORCE &bull; 06</span>
             <h2>Streamlining Application Processing</h2>
             <p>
               Empower administrative teams to manage applications, coordinate approvals, and monitor service delivery
@@ -2743,7 +2795,7 @@
     <section class="benefits-sec" id="benefits">
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag">ENABLING BETTER GOVERNANCE</span>
+          <span class="badge-tag">ENABLING BETTER GOVERNANCE &bull; 07</span>
           <h2>More Visibility. More Connected Operations.</h2>
           <p>
             Standardize service delivery, boost administrative throughput, and enhance citizen satisfaction across
@@ -2754,7 +2806,7 @@
         <div class="benefits-grid">
           <!-- 1 -->
           <div class="benefit-card">
-            <span class="benefit-card__num">Process Modernization</span>
+            <span class="benefit-card__num">01 / Process Modernization</span>
             <h3 class="benefit-card__title">Reduced Manual Processes</h3>
             <p class="benefit-card__desc">
               Transition from paper-based processes to digital workflows, eliminating physical file transfers and lost
@@ -2764,7 +2816,7 @@
 
           <!-- 2 -->
           <div class="benefit-card">
-            <span class="benefit-card__num">Institutional Openness</span>
+            <span class="benefit-card__num">02 / Institutional Openness</span>
             <h3 class="benefit-card__title">Improved Transparency</h3>
             <p class="benefit-card__desc">
               Provide citizens and supervisory officers clear, real-time visibility into application stages and
@@ -2774,7 +2826,7 @@
 
           <!-- 3 -->
           <div class="benefit-card">
-            <span class="benefit-card__num">Rapid Onboarding</span>
+            <span class="benefit-card__num">03 / Rapid Onboarding</span>
             <h3 class="benefit-card__title">Faster Service Onboarding</h3>
             <p class="benefit-card__desc">
               Launch new services rapidly with no-code configuration, cutting deployment windows down to 2–5 days.
@@ -2783,7 +2835,7 @@
 
           <!-- 4 -->
           <div class="benefit-card">
-            <span class="benefit-card__num">Defined Ownership</span>
+            <span class="benefit-card__num">04 / Defined Ownership</span>
             <h3 class="benefit-card__title">Better Accountability</h3>
             <p class="benefit-card__desc">
               Enforce officer ownership across workflows with automated timestamps and tamper-proof audit trails.
@@ -2792,7 +2844,7 @@
 
           <!-- 5 -->
           <div class="benefit-card">
-            <span class="benefit-card__num">Enterprise Architecture</span>
+            <span class="benefit-card__num">05 / Enterprise Architecture</span>
             <h3 class="benefit-card__title">Scalable Service Delivery</h3>
             <p class="benefit-card__desc">
               Scale effortlessly to support hundreds of high-volume citizen schemes on a unified foundation.
@@ -2801,7 +2853,7 @@
 
           <!-- 6 -->
           <div class="benefit-card">
-            <span class="benefit-card__num">Strategic Planning</span>
+            <span class="benefit-card__num">06 / Strategic Planning</span>
             <h3 class="benefit-card__title">Informed Decisions</h3>
             <p class="benefit-card__desc">
               Leverage real-time disposal data, demand trends, and turnaround analytics for strategic governance
@@ -2836,7 +2888,7 @@
       <div class="approach-sec__glow"></div>
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag badge-tag--dark">FROM REQUIREMENTS TO IMPLEMENTATION</span>
+          <span class="badge-tag badge-tag--dark">FROM REQUIREMENTS TO IMPLEMENTATION &bull; 08</span>
           <h2>A Structured Approach to Digital Transformation</h2>
           <p>
             A proven 3-step rollout model refined over three decades of public sector delivery.
@@ -2891,7 +2943,7 @@
     <section class="customers-sec" id="customers">
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag">OUR CUSTOMERS</span>
+          <span class="badge-tag">OUR CUSTOMERS &bull; 09</span>
           <h2>Supporting Digital Citizen Services at Scale</h2>
           <p>
             Powering state-wide service delivery across departments, development authorities, and citizen service
@@ -2942,7 +2994,7 @@
     <section class="final-cta" aria-labelledby="cta-title">
       <div class="final-cta__glow"></div>
       <div class="container final-cta__inner">
-        <span class="badge-tag badge-tag--dark">Get in Touch</span>
+        <span class="badge-tag badge-tag--dark">10 / Final Call to Action</span>
         <h2 class="final-cta__title" id="cta-title">
           Build Connected Citizen Services with CitizenServ
         </h2>
