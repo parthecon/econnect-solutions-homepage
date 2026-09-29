@@ -1841,32 +1841,35 @@
 
     @media (max-width: 992px) {
       .hero-serv {
+        background-color: #07101C;
         background-image: 
-          linear-gradient(
-            180deg,
-            rgba(7, 16, 28, 0.96) 0%,
-            rgba(7, 16, 28, 0.92) 55%,
-            rgba(7, 16, 28, 0.98) 100%
-          ),
-          url('hero.png');
-        background-position: 70% center;
+          radial-gradient(circle at 85% 15%, rgba(14, 165, 233, 0.20) 0%, transparent 55%),
+          radial-gradient(circle at 15% 85%, rgba(249, 115, 22, 0.12) 0%, transparent 50%),
+          linear-gradient(180deg, #07101C 0%, #0A192F 100%);
+        padding: 48px 0 42px;
+        min-height: auto;
+      }
+
+      .hero-serv__visual {
+        display: none !important;
       }
 
       .hero-serv__visual-anchor {
-        display: none;
+        display: none !important;
       }
 
       .hero-serv__mobile-card {
         display: block;
-        margin: 24px 0 28px;
+        margin: 22px 0 24px;
       }
 
       .hero-serv__mobile-img-wrap {
         position: relative;
         border-radius: var(--radius-lg);
         overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+        border: 1px solid rgba(56, 189, 248, 0.35);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+        background: #0B192C;
       }
 
       .hero-serv__mobile-img {
@@ -1875,30 +1878,30 @@
         display: block;
         aspect-ratio: 16/9;
         object-fit: cover;
-        object-position: 80% center;
+        object-position: right center;
       }
 
       .hero-serv__mobile-badge {
         position: absolute;
-        bottom: 12px;
-        left: 12px;
+        bottom: 10px;
+        left: 10px;
         background: rgba(7, 16, 28, 0.92);
         backdrop-filter: blur(8px);
         border: 1px solid rgba(255, 255, 255, 0.22);
         color: #FFFFFF;
-        font-size: 11.5px;
+        font-size: 11px;
         font-weight: 700;
-        padding: 6px 14px;
+        padding: 5px 12px;
         border-radius: 999px;
         display: inline-flex;
         align-items: center;
-        gap: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        gap: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
       }
 
       .hero-serv__mobile-badge .pulse-dot {
-        width: 8px;
-        height: 8px;
+        width: 7px;
+        height: 7px;
         border-radius: 50%;
         background: #10B981;
         box-shadow: 0 0 8px #10B981;
@@ -1927,62 +1930,79 @@
       }
 
       .hero-serv {
-        padding: 48px 0 44px;
+        padding: 38px 0 34px;
       }
 
       .hero-serv__brand-row {
         gap: 8px;
-        margin-bottom: 16px;
+        margin-bottom: 14px;
       }
 
       .hero-serv__brand-logo {
-        height: 32px;
+        height: 30px;
+        padding: 4px 10px;
+      }
+
+      .hero-serv__badge-pill {
+        font-size: 11px;
+        padding: 3px 10px;
       }
 
       .hero-serv__h1 {
-        font-size: clamp(26px, 6.2vw, 34px);
-        margin-bottom: 14px;
+        font-size: clamp(23px, 5.8vw, 30px);
+        margin-bottom: 12px;
         line-height: 1.22;
       }
 
       .hero-serv__desc {
-        font-size: 15px;
-        line-height: 1.58;
-        margin-bottom: 22px;
+        font-size: 14.5px;
+        line-height: 1.55;
+        margin-bottom: 20px;
       }
 
       .hero-serv__actions {
         flex-direction: column;
         width: 100%;
-        gap: 12px;
-        margin-bottom: 24px;
+        gap: 10px;
+        margin-bottom: 18px;
       }
 
       .hero-serv__actions .btn {
         width: 100%;
-        padding: 14px 20px;
+        justify-content: center;
+        padding: 13px 18px;
+      }
+
+      .hero-serv__mobile-card {
+        margin: 18px 0 20px;
       }
 
       .hero-stats {
         grid-template-columns: 1fr;
-        gap: 10px;
-        padding-top: 20px;
+        gap: 8px;
+        padding-top: 16px;
       }
 
       .hero-stat-card {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 12px 16px;
+        padding: 11px 14px;
+        background: rgba(15, 23, 42, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: var(--radius-md);
       }
 
       .hero-stat-card__val {
-        font-size: 24px;
+        font-size: 22px;
         margin-bottom: 0;
       }
 
       .hero-stat-card__label {
-        font-size: 12px;
+        font-size: 11.5px;
+        text-align: right;
+        max-width: 65%;
+      }
         text-align: right;
         max-width: 60%;
       }
@@ -2281,7 +2301,7 @@
 
   <main>
     <!-- ==========================================================================
-         01 / HERO SECTION
+         HERO SECTION
          ========================================================================== -->
     <section class="hero-serv" id="hero" aria-labelledby="hero-title">
       <div class="hero-serv__glow"></div>
@@ -2290,7 +2310,7 @@
         <div class="hero-serv__content">
           <div class="hero-serv__brand-row">
             <img src="citizen-serv-logo.png" alt="CitizenServ Logo" class="hero-serv__brand-logo" />
-            <span class="badge-tag badge-tag--dark">01 / Hero</span>
+            <span class="badge-tag badge-tag--dark">PUBLIC SERVICE PLATFORM</span>
             <span class="hero-serv__badge-pill">&#9881; Configurable E-Governance</span>
             <span class="hero-serv__badge-pill">&#10003; CMMI Level 5 Assured</span>
           </div>
@@ -2368,12 +2388,12 @@
     </section>
 
     <!-- ==========================================================================
-         02 / PLATFORM OVERVIEW
+         PLATFORM OVERVIEW
          ========================================================================== -->
     <section class="overview-sec" id="overview">
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag">DIGITAL GOVERNANCE &bull; 02 / Platform Overview</span>
+          <span class="badge-tag">PLATFORM OVERVIEW</span>
           <h2>A Common Platform for Citizen Service Delivery</h2>
           <p>
             CitizenServ unifies public services, application processing, and back-office workflows into one configurable platform across web, mobile, and assisted channels.
@@ -2446,12 +2466,12 @@
     </section>
 
     <!-- ==========================================================================
-         03 / E-GOVERNANCE MODEL
+         E-GOVERNANCE ARCHITECTURE
          ========================================================================== -->
     <section class="model-sec" id="model">
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag">E-GOVERNANCE ARCHITECTURE &bull; 03</span>
+          <span class="badge-tag">E-GOVERNANCE ARCHITECTURE</span>
           <h2>Designed for Modern Government Services</h2>
           <p>
             CitizenServ manages the full service lifecycle with configurable workflows, automated scrutiny, and integrated administration.
@@ -2466,7 +2486,7 @@
                 <div class="model-card__title">Core Platform Capabilities</div>
                 <div class="model-card__sub">Configurable Foundation &amp; Controls</div>
               </div>
-              <span class="model-card__badge model-card__badge--blue">6 Core Modules</span>
+              <span class="model-card__badge model-card__badge--blue">Core Capabilities</span>
             </div>
 
             <div class="model-features-list">
@@ -2527,7 +2547,7 @@
                 <div class="model-card__title">Lifecycle Governance Stack</div>
                 <div class="model-card__sub">End-to-End Service Orchestration</div>
               </div>
-              <span class="model-card__badge model-card__badge--green">Layered Engine</span>
+              <span class="model-card__badge model-card__badge--green">Governance Engine</span>
             </div>
 
             <div class="model-diagram-stack">
@@ -2603,12 +2623,12 @@
     </section>
 
     <!-- ==========================================================================
-         04 / PRODUCT IMPACT
+         PLATFORM IMPACT
          ========================================================================== -->
-    <section class="impact-banner" aria-label="Product Impact">
+    <section class="impact-banner" aria-label="Platform Impact">
       <div class="impact-banner__glow"></div>
       <div class="container impact-banner__inner">
-        <span class="badge-tag badge-tag--dark" style="margin-bottom: 16px;">04 / Product Impact</span>
+        <span class="badge-tag badge-tag--dark" style="margin-bottom: 16px;">PLATFORM IMPACT</span>
         <h2 class="impact-banner__title">Making Public Services More Accessible</h2>
         <p class="impact-banner__desc">
           Connecting citizens and government departments through structured, transparent, and technology-driven service workflows.
@@ -2617,13 +2637,13 @@
     </section>
 
     <!-- ==========================================================================
-         05 / CITIZEN EXPERIENCE
+         CITIZEN EXPERIENCE
          ========================================================================== -->
     <section class="experience-sec" id="citizen-experience">
       <div class="container">
         <div class="split-layout">
           <div class="split-intro">
-            <span class="badge-tag">PROVIDING CITIZENS &bull; 05</span>
+            <span class="badge-tag">CITIZEN EXPERIENCE</span>
             <h2>Government Services, Made Easier to Access</h2>
             <p>
               A unified digital window for citizens to discover services, submit applications, and track progress without visiting government offices.
@@ -2687,7 +2707,7 @@
     </section>
 
     <!-- ==========================================================================
-         06 / WORKFORCE & ADMINISTRATION
+         WORKFORCE & ADMINISTRATION
          ========================================================================== -->
     <section class="workforce-sec" id="workforce">
       <div class="container">
@@ -2738,7 +2758,7 @@
           </div>
 
           <div class="split-intro">
-            <span class="badge-tag">EMPOWERING YOUR WORKFORCE &bull; 06</span>
+            <span class="badge-tag">ADMINISTRATION &amp; WORKFORCE</span>
             <h2>Streamlining Application Processing</h2>
             <p>
               Empower administrative teams to manage applications, coordinate approvals, and monitor service delivery through a centralized console.
@@ -2758,12 +2778,12 @@
     </section>
 
     <!-- ==========================================================================
-         07 / OPERATIONAL BENEFITS
+         OPERATIONAL BENEFITS
          ========================================================================== -->
     <section class="benefits-sec" id="benefits">
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag">ENABLING BETTER GOVERNANCE &bull; 07</span>
+          <span class="badge-tag">OPERATIONAL BENEFITS</span>
           <h2>More Visibility. More Connected Operations.</h2>
           <p>
             Standardize service delivery, boost administrative throughput, and enhance citizen satisfaction across public departments.
@@ -2773,7 +2793,7 @@
         <div class="benefits-grid">
           <!-- 1 -->
           <div class="benefit-card">
-            <span class="benefit-card__num">01 / Process Modernization</span>
+            <span class="benefit-card__num">Process Modernization</span>
             <h3 class="benefit-card__title">Reduced Manual Processes</h3>
             <p class="benefit-card__desc">
               Transition from paper-based processes to digital workflows, eliminating physical file transfers and lost paperwork.
@@ -2782,7 +2802,7 @@
 
           <!-- 2 -->
           <div class="benefit-card">
-            <span class="benefit-card__num">02 / Institutional Openness</span>
+            <span class="benefit-card__num">Institutional Openness</span>
             <h3 class="benefit-card__title">Improved Transparency</h3>
             <p class="benefit-card__desc">
               Provide citizens and supervisory officers clear, real-time visibility into application stages and decisions.
@@ -2791,7 +2811,7 @@
 
           <!-- 3 -->
           <div class="benefit-card">
-            <span class="benefit-card__num">03 / Rapid Onboarding</span>
+            <span class="benefit-card__num">Rapid Onboarding</span>
             <h3 class="benefit-card__title">Faster Service Onboarding</h3>
             <p class="benefit-card__desc">
               Launch new services rapidly with no-code configuration, cutting deployment windows down to 2–5 days.
@@ -2800,7 +2820,7 @@
 
           <!-- 4 -->
           <div class="benefit-card">
-            <span class="benefit-card__num">04 / Defined Ownership</span>
+            <span class="benefit-card__num">Defined Ownership</span>
             <h3 class="benefit-card__title">Better Accountability</h3>
             <p class="benefit-card__desc">
               Enforce officer ownership across workflows with automated timestamps and tamper-proof audit trails.
@@ -2809,7 +2829,7 @@
 
           <!-- 5 -->
           <div class="benefit-card">
-            <span class="benefit-card__num">05 / Enterprise Architecture</span>
+            <span class="benefit-card__num">Enterprise Architecture</span>
             <h3 class="benefit-card__title">Scalable Service Delivery</h3>
             <p class="benefit-card__desc">
               Scale effortlessly to support hundreds of high-volume citizen schemes on a unified foundation.
@@ -2818,7 +2838,7 @@
 
           <!-- 6 -->
           <div class="benefit-card">
-            <span class="benefit-card__num">06 / Strategic Planning</span>
+            <span class="benefit-card__num">Strategic Planning</span>
             <h3 class="benefit-card__title">Informed Decisions</h3>
             <p class="benefit-card__desc">
               Leverage real-time disposal data, demand trends, and turnaround analytics for strategic governance planning.
@@ -2845,13 +2865,13 @@
     </section>
 
     <!-- ==========================================================================
-         08 / IMPLEMENTATION APPROACH
+         IMPLEMENTATION APPROACH
          ========================================================================== -->
     <section class="approach-sec" id="approach">
       <div class="approach-sec__glow"></div>
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag badge-tag--dark">FROM REQUIREMENTS TO IMPLEMENTATION &bull; 08</span>
+          <span class="badge-tag badge-tag--dark">IMPLEMENTATION ROADMAP</span>
           <h2>A Structured Approach to Digital Transformation</h2>
           <p>
             A proven 3-step rollout model refined over three decades of public sector delivery.
@@ -2900,12 +2920,12 @@
     </section>
 
     <!-- ==========================================================================
-         09 / OUR CUSTOMERS
+         CLIENTELE & DEPLOYMENTS
          ========================================================================== -->
     <section class="customers-sec" id="customers">
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag">OUR CUSTOMERS &bull; 09</span>
+          <span class="badge-tag">PROVEN DEPLOYMENTS</span>
           <h2>Supporting Digital Citizen Services at Scale</h2>
           <p>
             Powering state-wide service delivery across departments, development authorities, and citizen service centers.
@@ -2949,12 +2969,12 @@
     </section>
 
     <!-- ==========================================================================
-         10 / FINAL CTA
+         GET STARTED
          ========================================================================== -->
     <section class="final-cta" aria-labelledby="cta-title">
       <div class="final-cta__glow"></div>
       <div class="container final-cta__inner">
-        <span class="badge-tag badge-tag--dark">10 / Final Call to Action</span>
+        <span class="badge-tag badge-tag--dark">GET STARTED</span>
         <h2 class="final-cta__title" id="cta-title">
           Build Connected Citizen Services with CitizenServ
         </h2>
