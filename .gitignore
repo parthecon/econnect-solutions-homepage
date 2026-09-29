@@ -7,3 +7,6 @@ Desktop.ini
 *.tmp
 build_proto.ps1
 generate_homepage.ps1
+
+# Nested separate repo folder
+New folder/
