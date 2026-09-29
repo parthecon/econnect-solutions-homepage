@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Essentials -->
   <title>CitizenServ | Unified Digital Citizen Services Platform</title>
   <meta name="description"
@@ -476,15 +476,13 @@
     .hero-serv {
       position: relative;
       background-color: #07101C;
-      background-image: 
-        linear-gradient(
-          90deg,
+      background-image:
+        linear-gradient(90deg,
           rgba(7, 16, 28, 0.97) 0%,
           rgba(7, 16, 28, 0.94) 38%,
           rgba(7, 16, 28, 0.74) 54%,
           rgba(7, 16, 28, 0.28) 72%,
-          rgba(7, 16, 28, 0.08) 100%
-        ),
+          rgba(7, 16, 28, 0.08) 100%),
         url('hero.png');
       background-size: cover;
       background-position: right center;
@@ -710,8 +708,17 @@
     }
 
     @keyframes heroPulseDot {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.3); opacity: 0.6; }
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.3);
+        opacity: 0.6;
+      }
     }
 
     .hero-float-card__icon {
@@ -732,10 +739,6 @@
       font-weight: 500;
     }
 
-    /* Mobile preview card container */
-    .hero-serv__mobile-card {
-      display: none;
-    }
 
     /* ==========================================================================
        02 / PLATFORM OVERVIEW (4 Feature Cards)
@@ -1658,6 +1661,7 @@
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
@@ -1780,7 +1784,17 @@
        ========================================================================== */
     @media (max-width: 1024px) {
       .hero-serv {
-        padding: 72px 0 64px;
+        background-color: #07101C;
+        background-image:
+          linear-gradient(180deg,
+            rgba(7, 16, 28, 0.88) 0%,
+            rgba(7, 16, 28, 0.78) 45%,
+            rgba(7, 16, 28, 0.94) 100%),
+          url('hero.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 64px 0 56px;
         min-height: auto;
       }
 
@@ -1793,18 +1807,12 @@
         max-width: 100%;
       }
 
-      .hero-serv__visual-anchor {
-        height: auto;
-        flex-direction: row;
-        gap: 16px;
-        justify-content: flex-start;
-        flex-wrap: wrap;
+      .hero-serv__visual {
+        display: none !important;
       }
 
-      .hero-float-card--top,
-      .hero-float-card--bottom {
-        align-self: auto;
-        margin: 0;
+      .hero-serv__visual-anchor {
+        display: none !important;
       }
 
       .overview-grid {
@@ -1842,11 +1850,16 @@
     @media (max-width: 992px) {
       .hero-serv {
         background-color: #07101C;
-        background-image: 
-          radial-gradient(circle at 85% 15%, rgba(14, 165, 233, 0.20) 0%, transparent 55%),
-          radial-gradient(circle at 15% 85%, rgba(249, 115, 22, 0.12) 0%, transparent 50%),
-          linear-gradient(180deg, #07101C 0%, #0A192F 100%);
-        padding: 48px 0 42px;
+        background-image:
+          linear-gradient(180deg,
+            rgba(7, 16, 28, 0.88) 0%,
+            rgba(7, 16, 28, 0.78) 45%,
+            rgba(7, 16, 28, 0.94) 100%),
+          url('hero.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 56px 0 48px;
         min-height: auto;
       }
 
@@ -1858,56 +1871,6 @@
         display: none !important;
       }
 
-      .hero-serv__mobile-card {
-        display: block;
-        margin: 22px 0 24px;
-      }
-
-      .hero-serv__mobile-img-wrap {
-        position: relative;
-        border-radius: var(--radius-lg);
-        overflow: hidden;
-        border: 1px solid rgba(56, 189, 248, 0.35);
-        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
-        background: #0B192C;
-      }
-
-      .hero-serv__mobile-img {
-        width: 100%;
-        height: auto;
-        display: block;
-        aspect-ratio: 16/9;
-        object-fit: cover;
-        object-position: right center;
-      }
-
-      .hero-serv__mobile-badge {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        background: rgba(7, 16, 28, 0.92);
-        backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.22);
-        color: #FFFFFF;
-        font-size: 11px;
-        font-weight: 700;
-        padding: 5px 12px;
-        border-radius: 999px;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-      }
-
-      .hero-serv__mobile-badge .pulse-dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: #10B981;
-        box-shadow: 0 0 8px #10B981;
-        display: inline-block;
-      }
-
       .model-grid {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -1915,6 +1878,7 @@
     }
 
     @media (max-width: 768px) {
+
       .navbar__nav,
       .navbar__actions .btn {
         display: none;
@@ -1930,79 +1894,62 @@
       }
 
       .hero-serv {
-        padding: 38px 0 34px;
+        padding: 48px 0 44px;
       }
 
       .hero-serv__brand-row {
         gap: 8px;
-        margin-bottom: 14px;
+        margin-bottom: 16px;
       }
 
       .hero-serv__brand-logo {
-        height: 30px;
-        padding: 4px 10px;
-      }
-
-      .hero-serv__badge-pill {
-        font-size: 11px;
-        padding: 3px 10px;
+        height: 32px;
       }
 
       .hero-serv__h1 {
-        font-size: clamp(23px, 5.8vw, 30px);
-        margin-bottom: 12px;
+        font-size: clamp(26px, 6.2vw, 34px);
+        margin-bottom: 14px;
         line-height: 1.22;
       }
 
       .hero-serv__desc {
-        font-size: 14.5px;
-        line-height: 1.55;
-        margin-bottom: 20px;
+        font-size: 15px;
+        line-height: 1.58;
+        margin-bottom: 22px;
       }
 
       .hero-serv__actions {
         flex-direction: column;
         width: 100%;
-        gap: 10px;
-        margin-bottom: 18px;
+        gap: 12px;
+        margin-bottom: 24px;
       }
 
       .hero-serv__actions .btn {
         width: 100%;
-        justify-content: center;
-        padding: 13px 18px;
-      }
-
-      .hero-serv__mobile-card {
-        margin: 18px 0 20px;
+        padding: 14px 20px;
       }
 
       .hero-stats {
         grid-template-columns: 1fr;
-        gap: 8px;
-        padding-top: 16px;
+        gap: 10px;
+        padding-top: 20px;
       }
 
       .hero-stat-card {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 11px 14px;
-        background: rgba(15, 23, 42, 0.65);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: var(--radius-md);
+        padding: 12px 16px;
       }
 
       .hero-stat-card__val {
-        font-size: 22px;
+        font-size: 24px;
         margin-bottom: 0;
       }
 
       .hero-stat-card__label {
-        font-size: 11.5px;
-        text-align: right;
-        max-width: 65%;
-      }
+        font-size: 12px;
         text-align: right;
         max-width: 60%;
       }
@@ -2262,7 +2209,8 @@
       </nav>
 
       <div class="navbar__actions">
-        <button type="button" class="btn btn-primary" onclick="openModal('Get in Touch — CitizenServ')">Get in Touch</button>
+        <button type="button" class="btn btn-primary" onclick="openModal('Get in Touch — CitizenServ')">Get in
+          Touch</button>
         <button type="button" class="navbar__hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -2285,7 +2233,8 @@
       <a href="#approach" class="mobile-drawer__link" onclick="toggleMenu()">Implementation Approach</a>
       <a href="#customers" class="mobile-drawer__link" onclick="toggleMenu()">Our Customers</a>
     </div>
-    <button type="button" class="btn btn-primary" style="width: 100%;" onclick="openModal('Get in Touch — CitizenServ'); toggleMenu();">
+    <button type="button" class="btn btn-primary" style="width: 100%;"
+      onclick="openModal('Get in Touch — CitizenServ'); toggleMenu();">
       Get in Touch
     </button>
   </div>
@@ -2301,7 +2250,7 @@
 
   <main>
     <!-- ==========================================================================
-         HERO SECTION
+         01 / HERO SECTION
          ========================================================================== -->
     <section class="hero-serv" id="hero" aria-labelledby="hero-title">
       <div class="hero-serv__glow"></div>
@@ -2310,7 +2259,6 @@
         <div class="hero-serv__content">
           <div class="hero-serv__brand-row">
             <img src="citizen-serv-logo.png" alt="CitizenServ Logo" class="hero-serv__brand-logo" />
-            <span class="badge-tag badge-tag--dark">PUBLIC SERVICE PLATFORM</span>
             <span class="hero-serv__badge-pill">&#9881; Configurable E-Governance</span>
             <span class="hero-serv__badge-pill">&#10003; CMMI Level 5 Assured</span>
           </div>
@@ -2320,7 +2268,8 @@
           </h1>
 
           <p class="hero-serv__desc">
-            A configurable e-governance platform to launch, process, and scale citizen services across connected digital workflows.
+            A configurable e-governance platform to launch, process, and scale citizen services across connected digital
+            workflows.
           </p>
 
           <div class="hero-serv__actions">
@@ -2334,17 +2283,6 @@
             <a href="#approach" class="btn btn-secondary btn-lg">
               Explore Demo Process
             </a>
-          </div>
-
-          <!-- Mobile Hero Preview Card (Rendered on mobile screens so the citizen & portal artwork is crisp and prominent) -->
-          <div class="hero-serv__mobile-card">
-            <div class="hero-serv__mobile-img-wrap">
-              <img src="hero.png" alt="CitizenServ Platform Live Workflow" class="hero-serv__mobile-img" />
-              <div class="hero-serv__mobile-badge">
-                <span class="pulse-dot"></span>
-                <span>Live Portal &bull; 200+ Services in Punjab</span>
-              </div>
-            </div>
           </div>
 
           <!-- Proof points / Key metrics from Company Profile -->
@@ -2388,15 +2326,16 @@
     </section>
 
     <!-- ==========================================================================
-         PLATFORM OVERVIEW
+         02 / PLATFORM OVERVIEW
          ========================================================================== -->
     <section class="overview-sec" id="overview">
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag">PLATFORM OVERVIEW</span>
+          <span class="badge-tag">DIGITAL GOVERNANCE &bull; Platform Overview</span>
           <h2>A Common Platform for Citizen Service Delivery</h2>
           <p>
-            CitizenServ unifies public services, application processing, and back-office workflows into one configurable platform across web, mobile, and assisted channels.
+            CitizenServ unifies public services, application processing, and back-office workflows into one configurable
+            platform across web, mobile, and assisted channels.
           </p>
         </div>
 
@@ -2438,7 +2377,9 @@
           <article class="overview-card overview-card--green">
             <div class="overview-card__icon-box" aria-hidden="true">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                <path
+                  d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
+                </path>
               </svg>
             </div>
             <h3 class="overview-card__title">AI-Assisted Processing</h3>
@@ -2466,7 +2407,7 @@
     </section>
 
     <!-- ==========================================================================
-         E-GOVERNANCE ARCHITECTURE
+         03 / E-GOVERNANCE MODEL
          ========================================================================== -->
     <section class="model-sec" id="model">
       <div class="container">
@@ -2474,7 +2415,8 @@
           <span class="badge-tag">E-GOVERNANCE ARCHITECTURE</span>
           <h2>Designed for Modern Government Services</h2>
           <p>
-            CitizenServ manages the full service lifecycle with configurable workflows, automated scrutiny, and integrated administration.
+            CitizenServ manages the full service lifecycle with configurable workflows, automated scrutiny, and
+            integrated administration.
           </p>
         </div>
 
@@ -2486,7 +2428,7 @@
                 <div class="model-card__title">Core Platform Capabilities</div>
                 <div class="model-card__sub">Configurable Foundation &amp; Controls</div>
               </div>
-              <span class="model-card__badge model-card__badge--blue">Core Capabilities</span>
+              <span class="model-card__badge model-card__badge--blue">6 Core Modules</span>
             </div>
 
             <div class="model-features-list">
@@ -2494,7 +2436,8 @@
                 <div class="model-feature-row__icon">&#10003;</div>
                 <div class="model-feature-row__body">
                   <div class="model-feature-row__name">Configurable Service Creation</div>
-                  <div class="model-feature-row__desc">Launch forms, workflows, and fee structures in days without coding.</div>
+                  <div class="model-feature-row__desc">Launch forms, workflows, and fee structures in days without
+                    coding.</div>
                 </div>
               </div>
 
@@ -2502,7 +2445,8 @@
                 <div class="model-feature-row__icon">&#10003;</div>
                 <div class="model-feature-row__body">
                   <div class="model-feature-row__name">Digital Authentication</div>
-                  <div class="model-feature-row__desc">Secure citizen access via SSO, Aadhaar OTP, and role-based credentials.</div>
+                  <div class="model-feature-row__desc">Secure citizen access via SSO, Aadhaar OTP, and role-based
+                    credentials.</div>
                 </div>
               </div>
 
@@ -2510,7 +2454,8 @@
                 <div class="model-feature-row__icon">&#10003;</div>
                 <div class="model-feature-row__body">
                   <div class="model-feature-row__name">Automated Workflows</div>
-                  <div class="model-feature-row__desc">Dynamic application routing, scrutiny stages, and SLA enforcement.</div>
+                  <div class="model-feature-row__desc">Dynamic application routing, scrutiny stages, and SLA
+                    enforcement.</div>
                 </div>
               </div>
 
@@ -2518,7 +2463,8 @@
                 <div class="model-feature-row__icon">&#10003;</div>
                 <div class="model-feature-row__body">
                   <div class="model-feature-row__name">Integrated Payments</div>
-                  <div class="model-feature-row__desc">Online treasury reconciliation, challans, and multi-gateway fee collection.</div>
+                  <div class="model-feature-row__desc">Online treasury reconciliation, challans, and multi-gateway fee
+                    collection.</div>
                 </div>
               </div>
 
@@ -2526,7 +2472,8 @@
                 <div class="model-feature-row__icon">&#10003;</div>
                 <div class="model-feature-row__body">
                   <div class="model-feature-row__name">AI Document Processing</div>
-                  <div class="model-feature-row__desc">Instant OCR data extraction and automated certificate verification.</div>
+                  <div class="model-feature-row__desc">Instant OCR data extraction and automated certificate
+                    verification.</div>
                 </div>
               </div>
 
@@ -2534,7 +2481,8 @@
                 <div class="model-feature-row__icon">&#10003;</div>
                 <div class="model-feature-row__body">
                   <div class="model-feature-row__name">Centralized Governance</div>
-                  <div class="model-feature-row__desc">Live officer oversight, pendency tracking, and unified disposal audits.</div>
+                  <div class="model-feature-row__desc">Live officer oversight, pendency tracking, and unified disposal
+                    audits.</div>
                 </div>
               </div>
             </div>
@@ -2547,7 +2495,7 @@
                 <div class="model-card__title">Lifecycle Governance Stack</div>
                 <div class="model-card__sub">End-to-End Service Orchestration</div>
               </div>
-              <span class="model-card__badge model-card__badge--green">Governance Engine</span>
+              <span class="model-card__badge model-card__badge--green">Layered Engine</span>
             </div>
 
             <div class="model-diagram-stack">
@@ -2600,7 +2548,8 @@
                   <div class="model-stack-layer__dot" style="background: #0B192C;"></div>
                   <div>
                     <div class="model-stack-layer__name">Digital Service Disposal &amp; Sign-off</div>
-                    <div class="model-stack-layer__type">Digital signatures, QR-coded certificates &amp; SMS delivery</div>
+                    <div class="model-stack-layer__type">Digital signatures, QR-coded certificates &amp; SMS delivery
+                    </div>
                   </div>
                 </div>
                 <span class="model-stack-layer__tag" style="color: #0B192C; background: #E2E8F0;">Layer 5</span>
@@ -2623,34 +2572,38 @@
     </section>
 
     <!-- ==========================================================================
-         PLATFORM IMPACT
+         04 / PRODUCT IMPACT
          ========================================================================== -->
-    <section class="impact-banner" aria-label="Platform Impact">
+    <section class="impact-banner" aria-label="Product Impact">
       <div class="impact-banner__glow"></div>
       <div class="container impact-banner__inner">
-        <span class="badge-tag badge-tag--dark" style="margin-bottom: 16px;">PLATFORM IMPACT</span>
+        <span class="badge-tag badge-tag--dark" style="margin-bottom: 16px;">Product Impact</span>
         <h2 class="impact-banner__title">Making Public Services More Accessible</h2>
         <p class="impact-banner__desc">
-          Connecting citizens and government departments through structured, transparent, and technology-driven service workflows.
+          Connecting citizens and government departments through structured, transparent, and technology-driven service
+          workflows.
         </p>
       </div>
     </section>
 
     <!-- ==========================================================================
-         CITIZEN EXPERIENCE
+         05 / CITIZEN EXPERIENCE
          ========================================================================== -->
     <section class="experience-sec" id="citizen-experience">
       <div class="container">
         <div class="split-layout">
           <div class="split-intro">
-            <span class="badge-tag">CITIZEN EXPERIENCE</span>
+            <span class="badge-tag">PROVIDING CITIZENS</span>
             <h2>Government Services, Made Easier to Access</h2>
             <p>
-              A unified digital window for citizens to discover services, submit applications, and track progress without visiting government offices.
+              A unified digital window for citizens to discover services, submit applications, and track progress
+              without visiting government offices.
             </p>
-            <div style="background: #F0F9FF; border-left: 4px solid var(--accent-blue); padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: 24px;">
+            <div
+              style="background: #F0F9FF; border-left: 4px solid var(--accent-blue); padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: 24px;">
               <p style="font-size: 14px; color: var(--gray-700); margin: 0;">
-                Universal accessibility &mdash; accessible directly via citizen web portals, mobile browsers, or assisted operators at district Sewa Kendras.
+                Universal accessibility &mdash; accessible directly via citizen web portals, mobile browsers, or
+                assisted operators at district Sewa Kendras.
               </p>
             </div>
             <button type="button" class="btn btn-outline-primary" onclick="openModal('Citizen Experience Demo')">
@@ -2707,7 +2660,7 @@
     </section>
 
     <!-- ==========================================================================
-         WORKFORCE & ADMINISTRATION
+         06 / WORKFORCE & ADMINISTRATION
          ========================================================================== -->
     <section class="workforce-sec" id="workforce">
       <div class="container">
@@ -2718,7 +2671,8 @@
             <div class="matrix-box matrix-box--navy">
               <div class="matrix-box__icon">&#128202;</div>
               <div class="matrix-box__title">Centralized Dashboard</div>
-              <div class="matrix-box__desc">Real-time visibility into incoming applications, pendency, and throughput.</div>
+              <div class="matrix-box__desc">Real-time visibility into incoming applications, pendency, and throughput.
+              </div>
             </div>
 
             <!-- 2. Approval Workflows -->
@@ -2732,7 +2686,8 @@
             <div class="matrix-box matrix-box--blue">
               <div class="matrix-box__icon">&#128200;</div>
               <div class="matrix-box__title">MIS &amp; Reporting</div>
-              <div class="matrix-box__desc">Actionable analytics on officer performance and departmental turnaround.</div>
+              <div class="matrix-box__desc">Actionable analytics on officer performance and departmental turnaround.
+              </div>
             </div>
 
             <!-- 4. Application Records -->
@@ -2753,20 +2708,25 @@
             <div class="matrix-box matrix-box--orange">
               <div class="matrix-box__icon">&#9201;</div>
               <div class="matrix-box__title">TAT Monitoring</div>
-              <div class="matrix-box__desc">Automated countdowns and alerts against statutory service delivery SLAs.</div>
+              <div class="matrix-box__desc">Automated countdowns and alerts against statutory service delivery SLAs.
+              </div>
             </div>
           </div>
 
           <div class="split-intro">
-            <span class="badge-tag">ADMINISTRATION &amp; WORKFORCE</span>
+            <span class="badge-tag">EMPOWERING YOUR WORKFORCE</span>
             <h2>Streamlining Application Processing</h2>
             <p>
-              Empower administrative teams to manage applications, coordinate approvals, and monitor service delivery through a centralized console.
+              Empower administrative teams to manage applications, coordinate approvals, and monitor service delivery
+              through a centralized console.
             </p>
-            <div style="background: #FFFFFF; border: 1px solid var(--gray-200); border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-sm); margin-bottom: 24px;">
-              <div style="font-size: 13px; font-weight: 700; color: var(--navy-900); margin-bottom: 6px;">Institutional Oversight</div>
+            <div
+              style="background: #FFFFFF; border: 1px solid var(--gray-200); border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-sm); margin-bottom: 24px;">
+              <div style="font-size: 13px; font-weight: 700; color: var(--navy-900); margin-bottom: 6px;">Institutional
+                Oversight</div>
               <p style="font-size: 14px; color: var(--gray-600); margin: 0; line-height: 1.55;">
-                From frontline scrutiny to competent authority approval, CitizenServ coordinates workflows across departments without physical files or unmonitored delays.
+                From frontline scrutiny to competent authority approval, CitizenServ coordinates workflows across
+                departments without physical files or unmonitored delays.
               </p>
             </div>
             <button type="button" class="btn btn-primary" onclick="openModal('Workforce Console Demo')">
@@ -2778,15 +2738,16 @@
     </section>
 
     <!-- ==========================================================================
-         OPERATIONAL BENEFITS
+         07 / OPERATIONAL BENEFITS
          ========================================================================== -->
     <section class="benefits-sec" id="benefits">
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag">OPERATIONAL BENEFITS</span>
+          <span class="badge-tag">ENABLING BETTER GOVERNANCE</span>
           <h2>More Visibility. More Connected Operations.</h2>
           <p>
-            Standardize service delivery, boost administrative throughput, and enhance citizen satisfaction across public departments.
+            Standardize service delivery, boost administrative throughput, and enhance citizen satisfaction across
+            public departments.
           </p>
         </div>
 
@@ -2796,7 +2757,8 @@
             <span class="benefit-card__num">Process Modernization</span>
             <h3 class="benefit-card__title">Reduced Manual Processes</h3>
             <p class="benefit-card__desc">
-              Transition from paper-based processes to digital workflows, eliminating physical file transfers and lost paperwork.
+              Transition from paper-based processes to digital workflows, eliminating physical file transfers and lost
+              paperwork.
             </p>
           </div>
 
@@ -2805,7 +2767,8 @@
             <span class="benefit-card__num">Institutional Openness</span>
             <h3 class="benefit-card__title">Improved Transparency</h3>
             <p class="benefit-card__desc">
-              Provide citizens and supervisory officers clear, real-time visibility into application stages and decisions.
+              Provide citizens and supervisory officers clear, real-time visibility into application stages and
+              decisions.
             </p>
           </div>
 
@@ -2841,7 +2804,8 @@
             <span class="benefit-card__num">Strategic Planning</span>
             <h3 class="benefit-card__title">Informed Decisions</h3>
             <p class="benefit-card__desc">
-              Leverage real-time disposal data, demand trends, and turnaround analytics for strategic governance planning.
+              Leverage real-time disposal data, demand trends, and turnaround analytics for strategic governance
+              planning.
             </p>
           </div>
         </div>
@@ -2852,7 +2816,8 @@
             <span class="badge-tag">FLEXIBLE DEPLOYMENT</span>
             <h3>A Configurable Platform That Grows with Your Requirements</h3>
             <p>
-              Configurable architecture adaptable to State Cloud, SaaS, or On-Premise environments with robust integration capabilities.
+              Configurable architecture adaptable to State Cloud, SaaS, or On-Premise environments with robust
+              integration capabilities.
             </p>
           </div>
           <div>
@@ -2865,13 +2830,13 @@
     </section>
 
     <!-- ==========================================================================
-         IMPLEMENTATION APPROACH
+         08 / IMPLEMENTATION APPROACH
          ========================================================================== -->
     <section class="approach-sec" id="approach">
       <div class="approach-sec__glow"></div>
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag badge-tag--dark">IMPLEMENTATION ROADMAP</span>
+          <span class="badge-tag badge-tag--dark">FROM REQUIREMENTS TO IMPLEMENTATION</span>
           <h2>A Structured Approach to Digital Transformation</h2>
           <p>
             A proven 3-step rollout model refined over three decades of public sector delivery.
@@ -2884,7 +2849,8 @@
             <div class="step-card__num-badge">1</div>
             <h3 class="step-card__title">Explore the Platform</h3>
             <p class="step-card__desc">
-              Explore CitizenServ's workflows and delivery models through a product walkthrough tailored to your department.
+              Explore CitizenServ's workflows and delivery models through a product walkthrough tailored to your
+              department.
             </p>
           </div>
 
@@ -2920,15 +2886,16 @@
     </section>
 
     <!-- ==========================================================================
-         CLIENTELE & DEPLOYMENTS
+         09 / OUR CUSTOMERS
          ========================================================================== -->
     <section class="customers-sec" id="customers">
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag">PROVEN DEPLOYMENTS</span>
+          <span class="badge-tag">OUR CUSTOMERS</span>
           <h2>Supporting Digital Citizen Services at Scale</h2>
           <p>
-            Powering state-wide service delivery across departments, development authorities, and citizen service centers.
+            Powering state-wide service delivery across departments, development authorities, and citizen service
+            centers.
           </p>
         </div>
 
@@ -2963,23 +2930,25 @@
         </div>
 
         <div class="customer-highlight-strip">
-          <strong>Proven Deployments:</strong> Processing millions of citizen applications across Punjab Sewa Kendras, Development Authorities, and statutory boards with high SLA compliance.
+          <strong>Proven Deployments:</strong> Processing millions of citizen applications across Punjab Sewa Kendras,
+          Development Authorities, and statutory boards with high SLA compliance.
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-         GET STARTED
+         10 / FINAL CTA
          ========================================================================== -->
     <section class="final-cta" aria-labelledby="cta-title">
       <div class="final-cta__glow"></div>
       <div class="container final-cta__inner">
-        <span class="badge-tag badge-tag--dark">GET STARTED</span>
+        <span class="badge-tag badge-tag--dark">Get in Touch</span>
         <h2 class="final-cta__title" id="cta-title">
           Build Connected Citizen Services with CitizenServ
         </h2>
         <p class="final-cta__desc">
-          Discover how CitizenServ helps government departments accelerate service delivery, simplify workflows, and advance digital governance.
+          Discover how CitizenServ helps government departments accelerate service delivery, simplify workflows, and
+          advance digital governance.
         </p>
 
         <div class="final-cta__actions">
@@ -3009,7 +2978,8 @@
           <img src="e-connect-logo_white.png" alt="E-Connect Solutions" class="footer-brand__logo" />
           <p class="footer-brand__summary">
             <strong>E-Connect Solutions Pvt. Ltd.</strong><br>
-            CMMI Level 5 software engineering organization. Powering mission-critical platforms across citizen services, enterprise ERP, and public works since 1991.<br>
+            CMMI Level 5 software engineering organization. Powering mission-critical platforms across citizen services,
+            enterprise ERP, and public works since 1991.<br>
             <em>Built in Udaipur &bull; Delivering for India</em>
           </p>
           <div class="footer-brand__motto">We Connect &amp; Deliver</div>
@@ -3047,7 +3017,8 @@
           </div>
           <div class="footer-contact-item">
             <span>&#9993;&#65039;</span>
-            <span>Email: <a href="mailto:sales@e-connectsolutions.com" style="color: inherit;">sales@e-connectsolutions.com</a></span>
+            <span>Email: <a href="mailto:sales@e-connectsolutions.com"
+                style="color: inherit;">sales@e-connectsolutions.com</a></span>
           </div>
           <div class="footer-contact-item" style="font-size: 12.5px; color: var(--gray-400); margin-top: 10px;">
             <span>&#10003;</span>
@@ -3069,7 +3040,7 @@
   <div class="modal-backdrop" id="inquiryModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-box">
       <button type="button" class="modal-close" onclick="closeModal()" aria-label="Close dialog">&times;</button>
-      
+
       <div id="modalFormContainer">
         <div class="modal-header">
           <span class="badge-tag">Direct Inquiry</span>
@@ -3096,7 +3067,8 @@
             </div>
             <div class="form-group">
               <label class="form-label" for="deptName">Department / Organization *</label>
-              <input type="text" id="deptName" class="form-input" placeholder="e.g. Urban Development Authority" required />
+              <input type="text" id="deptName" class="form-input" placeholder="e.g. Urban Development Authority"
+                required />
             </div>
           </div>
 
@@ -3113,7 +3085,8 @@
 
           <div class="form-group">
             <label class="form-label" for="messageBox">Project Scope &amp; Requirements</label>
-            <textarea id="messageBox" class="form-textarea" rows="3" placeholder="Briefly describe the services you wish to onboard or digitize..."></textarea>
+            <textarea id="messageBox" class="form-textarea" rows="3"
+              placeholder="Briefly describe the services you wish to onboard or digitize..."></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 15px;">
@@ -3127,7 +3100,8 @@
         <div class="form-success-icon">&#10003;</div>
         <h3 style="font-size: 22px; font-weight: 800; color: var(--gray-900); margin-bottom: 8px;">Request Received</h3>
         <p style="font-size: 14.5px; color: var(--gray-600); line-height: 1.6; margin-bottom: 24px;">
-          Thank you for reaching out. Our GovTech solutions team will contact you within 1 business day with the requested demonstration details.
+          Thank you for reaching out. Our GovTech solutions team will contact you within 1 business day with the
+          requested demonstration details.
         </p>
         <button type="button" class="btn btn-primary" onclick="closeModal()">Close Window</button>
       </div>
@@ -3174,14 +3148,14 @@
     }
 
     // Close on click outside
-    inquiryModal.addEventListener('click', function(e) {
+    inquiryModal.addEventListener('click', function (e) {
       if (e.target === inquiryModal) {
         closeModal();
       }
     });
 
     // Close on Escape key
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && inquiryModal.classList.contains('active')) {
         closeModal();
       }
